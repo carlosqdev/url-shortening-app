@@ -3,8 +3,8 @@ import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
 import { FormToShorten } from './FormToShorten'
-import { getShortenLink } from '../services/get-shorten-link'
-import { store } from '../context/app/store'
+import { getShortenLink } from '../../services/get-shorten-link'
+import { store } from '../../context/app/store'
 
 
 describe('FormToShorten', () => {

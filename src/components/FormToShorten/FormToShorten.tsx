@@ -1,8 +1,8 @@
 import { SyntheticEvent, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { RootState, AddDispatch } from '../context/app/store'
-import { Link, setLinks } from '../context/features/linkSlice'
+import { RootState, AddDispatch } from '../../context/app/store'
+import { Link, setLinks } from '../../context/features/linkSlice'
 
 interface PropsFormToShorten {
   shorteLink: (link: string) => Promise<Link>

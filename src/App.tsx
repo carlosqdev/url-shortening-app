@@ -1,4 +1,4 @@
-import { FormToShorten } from './components/FormToShorten'
+import { FormToShorten } from './components/FormToShorten/FormToShorten'
 import { getShortenLink } from './services/get-shorten-link'
 
 function App() {
