@@ -24,7 +24,7 @@ describe('ListOfLinks', () => {
 	})
 
 	it('Should has a lot of list elements', async () => {
-		const multipleLinks: Link[] = [
+		const dataLinks: Link[] = [
 			{
 				code: '1',
 				original_link: 'http://google.com',
@@ -42,11 +42,11 @@ describe('ListOfLinks', () => {
 			},
 		]
 
-		render(<ListOfLinks links={multipleLinks}/>)
+		render(<ListOfLinks links={dataLinks}/>)
 
-		const listItem1 = await screen.findByText(multipleLinks[0].original_link)
-		const listItem2 = await screen.findByText(multipleLinks[1].original_link)
-		const listItem3 = await screen.findByText(multipleLinks[2].original_link)
+		const listItem1 = await screen.findByText(dataLinks[0].original_link)
+		const listItem2 = await screen.findByText(dataLinks[1].original_link)
+		const listItem3 = await screen.findByText(dataLinks[2].original_link)
 
 		expect(listItem1).toBeDefined()
 		expect(listItem2).toBeDefined()
