@@ -10,6 +10,8 @@ export const ShortLink = ({ original_link, full_short_link }: PropsLink) => {
 
 	const handleButtonClick = useCallback(() => {
 		setWasCopied(true)
+		// copy full short link
+		navigator.clipboard?.writeText(full_short_link)
 	}, [])
 
 	return (
