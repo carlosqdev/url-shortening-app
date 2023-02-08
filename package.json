@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -23,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
     "@vitejs/plugin-react-swc": "3.0.0",
+    "@vitest/coverage-c8": "^0.28.4",
     "eslint": "8.33.0",
     "eslint-plugin-react": "7.32.2",
     "happy-dom": "8.2.6",
