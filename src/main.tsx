@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 
 import App from './App'
+import './styles/globals.css'
 
 import { store } from './context/app/store'
 
