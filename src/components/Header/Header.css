@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  background: var(--white);
+}
+
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 30px 0px;
+}
+
+.header_logo {
+  width: 150px;
+}
+
+.header_button_hamburguer {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.header_hamburguer_image {
+  width: 45px;
+  filter: invert(11%) sepia(14%) saturate(523%) hue-rotate(218deg) brightness(92%) contrast(92%);
+}
