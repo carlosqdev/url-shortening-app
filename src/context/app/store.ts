@@ -3,9 +3,9 @@ import { configureStore } from '@reduxjs/toolkit'
 import linkReducer from '../features/linkSlice'
 
 export const store = configureStore({
-	reducer: {
-		links: linkReducer
-	}
+  reducer: {
+    links: linkReducer
+  }
 })
 
 // Infer the `RootState` and `AddDispatch` types from the store itself
