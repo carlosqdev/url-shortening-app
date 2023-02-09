@@ -33,9 +33,14 @@
   filter: invert(11%) sepia(14%) saturate(523%) hue-rotate(218deg) brightness(92%) contrast(92%);
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 48rem) {
   .header_wrapper {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .header_wrapper {
     gap: 30px;
   }
 
