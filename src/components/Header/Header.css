@@ -14,17 +14,33 @@
 }
 
 .header_logo {
-  width: 150px;
+  width: 130px;
 }
 
-.header_button_hamburguer {
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
+/* Hidden checkbox */
+.header_expand_menu {
+  display: none;
+}
+
+/* Show hidden content when the checkbox is checked */
+.header_expand_menu:checked+.expandable {
+  visibility: visible;
+  transition: .3s all ease;
 }
 
 .header_hamburguer_image {
   width: 45px;
   filter: invert(11%) sepia(14%) saturate(523%) hue-rotate(218deg) brightness(92%) contrast(92%);
+}
+
+@media screen and (min-width: 64rem) {
+  .header_wrapper {
+    width: 80%;
+    gap: 30px;
+  }
+
+  /* Hidden label in desktop */
+  .header_label {
+    display: none;
+  }
 }

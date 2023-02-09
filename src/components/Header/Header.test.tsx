@@ -15,15 +15,17 @@ describe('Header', () => {
     expect(logo).toBeDefined()
   })
 
-  it('Should have a hamburger button', () => {
+  it('Should have a checkbox', () => {
     render(<Header />)
 
-    const hambugerButton = screen.getByRole('button')
+    const inputCheckbox = screen.getByRole('checkbox', {
+      name: 'expand-menu'
+    })
 
-    expect(hambugerButton).toBeDefined()
+    expect(inputCheckbox).toBeDefined()
   })
 
-  it('Should have into hamburguer button a image', () => {
+  it('Should have a hamburguer menu image', () => {
     render(<Header />)
 
     const imageHamburger = screen.getByRole('img',{
