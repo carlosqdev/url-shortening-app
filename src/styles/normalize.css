@@ -377,3 +377,9 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Reset Figure */
+figure {
+  padding: 0;
+  margin: 0;
+}
