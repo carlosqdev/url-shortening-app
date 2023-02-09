@@ -99,6 +99,7 @@
 
   .navbar_item a:hover {
     color: var(--very_dark_violet);
+    transition: .3s all ease-in;
   }
 
   /* Link resources */
@@ -122,7 +123,8 @@
   }
 
   .navbar_item:nth-last-child(-n + 1):hover {
-    opacity: 0.9;
+    opacity: 0.8;
+    transition: .3s all ease-in;
   }
 
   /* Link login and sign Up */
