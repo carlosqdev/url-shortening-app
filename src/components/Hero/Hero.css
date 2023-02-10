@@ -1,0 +1,127 @@
+.hero {
+  width: 100%;
+}
+
+.hero_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_illustration {
+  margin-left: auto;
+  width: 95%;
+  height: 333px;
+  background-image: url(../../assets/images/illustration-working.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_content {
+  margin: 12px auto 0px auto;
+  width: 90%;
+  display: grid;
+  gap: 15px;
+  justify-items: center;
+}
+
+.hero_heading {
+  text-align: center;
+  font-family: var(--family);
+  font-weight: var(--bold);
+  font-size: 2.8rem;
+  color: var(--very_dark_violet);
+  margin: 0;
+}
+
+.hero_paragraph {
+  text-align: center;
+  font-family: var(--family);
+  font-weight: var(--medium);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--grayish_violet);
+  margin: 0;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width: 48rem) {
+  .hero_illustration {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .hero_content {
+    width: 80%;
+  }
+
+  .hero_heading {
+    font-size: 3.8rem;
+  }
+
+  .hero_paragraph {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .hero {
+    height: 56vh;
+    background-image: url(../../assets/images/illustration-working.svg);
+    background-repeat: no-repeat;
+    background-size: 56%;
+    background-position: top 8px right -29%;
+  }
+
+  .hero_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .hero_illustration {
+    display: none;
+  }
+
+  .hero_content {
+    margin: 50px 0px 0px 0px;
+    width: 61%;
+    justify-items: start;
+    gap: 5px;
+  }
+
+  .hero_content .getStarted {
+    margin-top: 16px;
+  }
+
+  .hero_heading {
+    text-align: left;
+    font-size: 4.2rem;
+  }
+
+  .hero_paragraph {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .hero {
+    margin-top: 20px;
+    height: 80vh;
+  }
+
+  .hero_content {
+    gap: 15px;
+  }
+
+  .hero_heading {
+    font-size: 5.2rem;
+  }
+
+  .hero_paragraph {
+    font-size: 1.5rem;
+  }
+}
