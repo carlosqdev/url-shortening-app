@@ -41,6 +41,7 @@
 
 @media screen and (min-width: 64rem) {
   .header_wrapper {
+    width: 90%;
     gap: 30px;
   }
 
