@@ -1,5 +1,6 @@
 import { Link } from '../../context/features/linkSlice'
 import { ShortLink } from '../ShortLink/ShortLink'
+import './ListOfLinks.css'
 
 interface PropsListOfLinks {
 	links: Link[]
@@ -7,8 +8,8 @@ interface PropsListOfLinks {
 
 export const ListOfLinks = ({ links }: PropsListOfLinks) => {
   return (
-    <section>
-      <ul>
+    <section className='listOfLinks'>
+      <ul className='listOfLinks_wrapper'>
         {links?.map(link => (
           <ShortLink
             key={link.code}

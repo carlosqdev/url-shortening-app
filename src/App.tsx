@@ -17,7 +17,7 @@ function App() {
       <main>
         <Hero />
         <Form shorteLink={getShortenLink} />
-        {/*<ListOfLinks links={links} /> */}
+        <ListOfLinks links={links} />
       </main>
     </>
   )
