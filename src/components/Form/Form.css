@@ -13,7 +13,7 @@
   width: 90%;
   display: grid;
   gap: 20px;
-  padding: 25px 20px;
+  padding: 25px;
   background: url('../../assets/images/bg-shorten-mobile.svg') no-repeat right top var(--dark_violet);
   border-radius: 10px;
 }
