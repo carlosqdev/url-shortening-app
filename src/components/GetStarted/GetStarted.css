@@ -1,0 +1,17 @@
+.getStarted {
+  font-family: var(--family);
+  font-weight: var(--bold);
+  font-size: 1.1rem;
+  width: 180px;
+  padding: 15px 0px;
+  background: var(--cyan);
+  color: var(--white);
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.getStarted:hover {
+  opacity: 0.8;
+  transition: .3s all ease-in;
+}
