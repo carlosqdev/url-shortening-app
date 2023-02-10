@@ -27,6 +27,7 @@
   --very_dark_blue: hsl(255, 11%, 22%);
   --very_dark_violet: hsl(260, 8%, 14%);
   --white: hsl(255, 255%, 255%);
+  --white_2: hsl(230, 25%, 95%);
 }
 
 body {

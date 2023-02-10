@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { RootState, AddDispatch } from '../../context/app/store'
 import { Link, setLinks } from '../../context/features/linkSlice'
+import './Form.css'
 
 interface PropsFormToShorten {
   shorteLink: (link: string) => Promise<Link>
 }
 
-export const FormToShorten = ({ shorteLink }: PropsFormToShorten) => {
+export const Form = ({ shorteLink }: PropsFormToShorten) => {
   // Hook
   const [link, setLink] = useState('')
   const [isEmptyInput, setIsEmptyInput] = useState(false)
@@ -36,17 +37,20 @@ export const FormToShorten = ({ shorteLink }: PropsFormToShorten) => {
   }
 
   return(
-    <form onSubmit={onSubmit}>
-      <input
-        value={link}
-        aria-label='link-input'
-        onChange={handleChange}
-        type="text"
-        placeholder="Shorten a link here..." />
+    <section className='form_wrapper'>
+      <form className='form' onSubmit={onSubmit}>
+        <input
+          className={isEmptyInput ? 'form_input input_empty' : 'form_input'}
+          value={link}
+          aria-label='link-input'
+          onChange={handleChange}
+          type="text"
+          placeholder="Shorten a link here..." />
 
-      {isEmptyInput && <span>Please add a link</span>}
+        {isEmptyInput && <span className='form_span'>Please add a link</span>}
 
-      <button>Shorten It!</button>
-    </form>
+        <button className='form_button'>Shorten It!</button>
+      </form>
+    </section>
   )
 }

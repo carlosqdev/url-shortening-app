@@ -1,9 +1,12 @@
-import { FormToShorten } from './components/FormToShorten/FormToShorten'
-import { ListOfLinks } from './components/ListOfLinks/ListOfLinks'
-import { getShortenLink } from './services/get-shorten-link'
 import { useSelector } from 'react-redux'
-import { RootState } from './context/app/store'
+
 import { Header } from './components/Header/Header'
+import { Hero } from './components/Hero/Hero'
+import { Form } from './components/Form/Form'
+import { ListOfLinks } from './components/ListOfLinks/ListOfLinks'
+
+import { RootState } from './context/app/store'
+import { getShortenLink } from './services/get-shorten-link'
 
 function App() {
   const links = useSelector((state: RootState) => state.links.value)
@@ -12,8 +15,9 @@ function App() {
     <>
       <Header />
       <main>
-        {/* <FormToShorten shorteLink={getShortenLink} />
-				<ListOfLinks links={links} /> */}
+        <Hero />
+        <Form shorteLink={getShortenLink} />
+        {/*<ListOfLinks links={links} /> */}
       </main>
     </>
   )

@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
-import { FormToShorten } from './FormToShorten'
+import { Form } from './Form'
 import { getShortenLink } from '../../services/get-shorten-link'
 import { store } from '../../context/app/store'
 
@@ -14,7 +14,7 @@ describe('FormToShorten', () => {
     const mockFn = vi.fn()
 
     render(<Provider store={store}>
-      <FormToShorten shorteLink={mockFn}/>
+      <Form shorteLink={mockFn}/>
     </Provider>)
 
 
@@ -29,7 +29,7 @@ describe('FormToShorten', () => {
 
   it('Should show alert to user when input is empty', () => {
     render(<Provider store={store}>
-      <FormToShorten shorteLink={getShortenLink}/>
+      <Form shorteLink={getShortenLink}/>
     </Provider>)
 
     const button = screen.getByRole('button', {

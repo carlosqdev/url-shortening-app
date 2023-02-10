@@ -169,6 +169,10 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+form {
+  box-sizing: border-box;
+}
+
 button,
 input,
 optgroup,
@@ -176,7 +180,7 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
-  font-size: 100%;
+  font-size: 1rem;
   /* 1 */
   line-height: 1.15;
   /* 1 */
