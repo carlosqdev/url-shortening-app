@@ -46,6 +46,7 @@
   font-weight: var(--bold);
   font-size: 1.125rem;
   background: var(--cyan);
+  cursor: pointer;
 }
 
 .shortLink .button:hover {

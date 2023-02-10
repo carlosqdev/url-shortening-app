@@ -67,6 +67,7 @@
   font-weight: var(--bold);
   color: var(--white);
   background: var(--cyan);
+  cursor: pointer;
 }
 
 .form_button:hover {
