@@ -67,7 +67,7 @@
 
 @media screen and (min-width: 64rem) {
   .hero {
-    height: 56vh;
+    height: 75vh;
     background-image: url(../../assets/images/illustration-working.svg);
     background-repeat: no-repeat;
     background-size: 56%;
@@ -110,7 +110,7 @@
 @media screen and (min-width: 80rem) {
   .hero {
     margin-top: 20px;
-    height: 80vh;
+    height: 85vh;
   }
 
   .hero_content {
