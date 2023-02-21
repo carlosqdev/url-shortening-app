@@ -8,6 +8,7 @@ import { CallToAction } from './components/CallToAction/CallToAction'
 
 import { RootState } from './context/app/store'
 import { getShortenLink } from './services/get-shorten-link'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   const links = useSelector((state: RootState) => state.links.value)
@@ -20,6 +21,7 @@ function App() {
         <Form shorteLink={getShortenLink} />
         <ListOfLinks links={links} />
         <CallToAction />
+        <Footer />
       </main>
     </>
   )

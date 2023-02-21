@@ -1,0 +1,27 @@
+.footer_menu {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.footer_menu a {
+  color: var(--white);
+  font-family: var(--family);
+  font-size: 18px;
+  font-weight: var(--bold);
+  text-decoration: none;
+}
+
+.footer_sub_menu {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.footer_sub_menu a {
+  font-weight: var(--medium);
+  font-size: 17px;
+  color: var(--grayish_violet);
+}
