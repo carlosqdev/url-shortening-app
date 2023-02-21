@@ -1,0 +1,10 @@
+.menu_social {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  list-style: none;
+}
+
+.menu_social svg:hover {
+  filter: invert(57%) sepia(31%) saturate(7495%) hue-rotate(162deg) brightness(95%) contrast(101%);
+}

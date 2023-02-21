@@ -1,5 +1,6 @@
-import logo from '../../assets/images/logo.svg'
 import { FooterMenu } from '../FooterMenu/FooterMenu'
+import { MenuSocial } from '../MenuSocial/MenuSocial'
+import logo from '../../assets/images/logo.svg'
 import './Footer.css'
 
 export interface Navigation {
@@ -25,6 +26,7 @@ export const Footer = () => {
           <FooterMenu dataMenu={menuFeatures} />
           <FooterMenu dataMenu={menuResources} />
           <FooterMenu dataMenu={menuCompany} />
+          <MenuSocial />
         </nav>
       </div>
     </footer>
