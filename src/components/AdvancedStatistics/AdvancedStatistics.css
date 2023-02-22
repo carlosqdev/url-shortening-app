@@ -1,0 +1,29 @@
+.advancedStatistics {
+  padding-top: 100px;
+  background: var(--white_2);
+  display: flex;
+}
+
+.advancedStatistics header {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.advancedStatistics_title {
+  font-family: var(-family);
+  font-size: 1.6875rem;
+  font-weight: var(--bold);
+  text-align: center;
+  color: var(--very_dark_violet);
+}
+
+.advancedStatistics p {
+  font-family: var(-family);
+  font-size: 18px;
+  font-weight: var(--medium);
+  text-align: center;
+  color: var(--grayish_violet);
+  line-height: 1.6;
+}
