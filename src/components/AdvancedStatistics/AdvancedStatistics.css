@@ -2,6 +2,7 @@
   padding-top: 100px;
   background: var(--white_2);
   display: flex;
+  flex-direction: column;
 }
 
 .advancedStatistics header {
@@ -19,11 +20,51 @@
   color: var(--very_dark_violet);
 }
 
-.advancedStatistics p {
+.advancedStatistics_paragraph {
   font-family: var(-family);
   font-size: 18px;
   font-weight: var(--medium);
   text-align: center;
   color: var(--grayish_violet);
   line-height: 1.6;
+}
+
+.advancedStatistics_wrapper {
+  width: 90%;
+  margin: 100px auto;
+  list-style: none;
+  display: grid;
+  gap: 80px;
+}
+
+@media screen and (min-width: 48rem) {
+  .advancedStatistics header {
+    width: 80%;
+  }
+
+  .advancedStatistics_wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .advancedStatistics header {
+    width: 90%;
+    justify-items: center;
+  }
+
+  .advancedStatistics_wrapper {
+    width: 90%;
+    display: flex;
+    gap: 40px;
+  }
+
+  .advancedStatistics_title {
+    font-size: 2rem;
+  }
+
+  .advancedStatistics_paragraph {
+    font-size: 20px;
+    width: 567px;
+  }
 }
