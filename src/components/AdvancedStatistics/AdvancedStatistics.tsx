@@ -7,7 +7,11 @@ export const AdvancedStatistics = () => {
     <section className='advancedStatistics'>
       <header>
         <h2 className='advancedStatistics_title'>Advanced Statistics</h2>
-        <p className='advancedStatistics_paragraph' role='paragraph'>
+        <p
+          className='advancedStatistics_paragraph'
+          aria-label='paragraph description'
+          role='presentation'
+        >
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>

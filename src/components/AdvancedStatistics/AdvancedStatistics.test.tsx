@@ -24,7 +24,9 @@ describe('AdvancedStatistics', () => {
   it('should have a paragraph with more description', () => {
     render(<AdvancedStatistics />)
 
-    const paragraph = screen.getByRole('paragraph')
+    const paragraph = screen.getByRole('presentation', {
+      name: 'paragraph description'
+    })
 
     expect(paragraph).toBeDefined()
   })
