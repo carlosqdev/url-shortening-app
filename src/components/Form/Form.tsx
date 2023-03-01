@@ -14,29 +14,28 @@ export const Form = ({ shorteLink }: PropsFormToShorten) => {
   const [link, setLink] = useState('')
   const [isEmptyInput, setIsEmptyInput] = useState(false)
   // Redux
-  const links = useSelector((state: RootState) => state.links.value)
+  const { value, isGetting } = useSelector((state: RootState) => state.links)
   const dispatch: AddDispatch = useDispatch()
 
   const onSubmit = async (event: SyntheticEvent) => {
     event.preventDefault()
 
-    if(link.trim().length <= 0) {
+    if (link.trim().length <= 0) {
       setIsEmptyInput(true)
     } else {
       const newLink = await shorteLink(link)
 
-      dispatch(setLinks([...links, newLink]))
+      dispatch(setLinks([...value, newLink]))
       setIsEmptyInput(false)
       setLink('')
     }
-
   }
 
   const handleChange = (event: SyntheticEvent<HTMLInputElement>) => {
     setLink(event.currentTarget.value)
   }
 
-  return(
+  return (
     <section className='form_wrapper'>
       <form className='form' onSubmit={onSubmit}>
         <input
@@ -44,12 +43,22 @@ export const Form = ({ shorteLink }: PropsFormToShorten) => {
           value={link}
           aria-label='link-input'
           onChange={handleChange}
-          type="text"
-          placeholder="Shorten a link here..." />
+          type='text'
+          placeholder='Shorten a link here...'
+        />
 
         {isEmptyInput && <span className='form_span'>Please add a link</span>}
 
-        <button className='form_button'>Shorten It!</button>
+        {isGetting && (
+          <span className='form_span_getting'>Getting link please wait...</span>
+        )}
+
+        <button
+          disabled={isGetting}
+          className={isGetting ? 'form_button_disabled' : 'form_button'}
+        >
+          Shorten It!
+        </button>
       </form>
     </section>
   )

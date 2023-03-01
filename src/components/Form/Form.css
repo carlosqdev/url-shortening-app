@@ -19,7 +19,8 @@
 }
 
 .form_input,
-.form_button {
+.form_button,
+.form_button_disabled {
   box-sizing: border-box;
   font-family: var(--family);
   font-size: 1.125rem;
@@ -56,13 +57,19 @@
   transition: .3s all ease-in;
 }
 
+.form_span_getting,
 .form_span {
   color: var(--red);
   font-weight: var(--medium);
   font-size: 1rem;
 }
 
-.form_button {
+.form_span_getting {
+  color: var(--cyan);
+}
+
+.form_button,
+.form_button_disabled {
   font-size: 1.25rem;
   font-weight: var(--bold);
   color: var(--white);
@@ -73,6 +80,11 @@
 .form_button:hover {
   opacity: 0.8;
   transition: .3s all ease-in;
+}
+
+.form_button_disabled {
+  background: var(--gray);
+  cursor: not-allowed;
 }
 
 /* Responsive */
