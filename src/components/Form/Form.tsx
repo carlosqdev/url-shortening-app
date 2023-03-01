@@ -1,39 +1,12 @@
-import { SyntheticEvent, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-
-import { RootState, AddDispatch } from '../../context/app/store'
-import { Link, setLinks } from '../../context/features/linkSlice'
+import { useCreateShortLink } from '../../hooks/useCreateShortLink'
+import { useFormLink } from '../../hooks/useFormLink'
 import './Form.css'
 
-interface PropsFormToShorten {
-  shorteLink: (link: string) => Promise<Link>
-}
-
-export const Form = ({ shorteLink }: PropsFormToShorten) => {
-  // Hook
-  const [link, setLink] = useState('')
-  const [isEmptyInput, setIsEmptyInput] = useState(false)
-  // Redux
-  const { value, isGetting } = useSelector((state: RootState) => state.links)
-  const dispatch: AddDispatch = useDispatch()
-
-  const onSubmit = async (event: SyntheticEvent) => {
-    event.preventDefault()
-
-    if (link.trim().length <= 0) {
-      setIsEmptyInput(true)
-    } else {
-      const newLink = await shorteLink(link)
-
-      dispatch(setLinks([...value, newLink]))
-      setIsEmptyInput(false)
-      setLink('')
-    }
-  }
-
-  const handleChange = (event: SyntheticEvent<HTMLInputElement>) => {
-    setLink(event.currentTarget.value)
-  }
+export const Form = () => {
+  const { createShortLink, isCreating } = useCreateShortLink()
+  const { link, isEmptyInput, onSubmit, onLinkChange } = useFormLink({
+    createShortLink
+  })
 
   return (
     <section className='form_wrapper'>
@@ -42,20 +15,20 @@ export const Form = ({ shorteLink }: PropsFormToShorten) => {
           className={isEmptyInput ? 'form_input input_empty' : 'form_input'}
           value={link}
           aria-label='link-input'
-          onChange={handleChange}
+          onChange={onLinkChange}
           type='text'
           placeholder='Shorten a link here...'
         />
 
         {isEmptyInput && <span className='form_span'>Please add a link</span>}
 
-        {isGetting && (
+        {isCreating && (
           <span className='form_span_getting'>Getting link please wait...</span>
         )}
 
         <button
-          disabled={isGetting}
-          className={isGetting ? 'form_button_disabled' : 'form_button'}
+          disabled={isCreating}
+          className={isCreating ? 'form_button_disabled' : 'form_button'}
         >
           Shorten It!
         </button>

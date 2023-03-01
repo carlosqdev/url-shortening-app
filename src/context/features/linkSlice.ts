@@ -8,12 +8,12 @@ export interface Link {
 
 interface Links {
   value: Link[]
-  isGetting: boolean
+  isCreating: boolean
 }
 
 const initialState: Links = {
   value: [],
-  isGetting: false
+  isCreating: false
 }
 
 export const linkSlice = createSlice({
@@ -24,7 +24,7 @@ export const linkSlice = createSlice({
       state.value = values.payload
     },
     setIsGetting: (state, value) => {
-      state.isGetting = value.payload
+      state.isCreating = value.payload
     }
   }
 })
