@@ -111,6 +111,7 @@
     grid-area: input;
   }
 
+  .form_span_getting,
   .form_span {
     position: absolute;
     bottom: 10px;
