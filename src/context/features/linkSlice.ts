@@ -9,11 +9,13 @@ export interface Link {
 interface Links {
   value: Link[]
   isCreating: boolean
+  error: string
 }
 
 const initialState: Links = {
   value: [],
-  isCreating: false
+  isCreating: false,
+  error: ''
 }
 
 export const linkSlice = createSlice({
@@ -25,10 +27,13 @@ export const linkSlice = createSlice({
     },
     setIsGetting: (state, value) => {
       state.isCreating = value.payload
+    },
+    setError: (state, value) => {
+      state.error = value.payload
     }
   }
 })
 
-export const { setLinks, setIsGetting } = linkSlice.actions
+export const { setLinks, setIsGetting, setError } = linkSlice.actions
 
 export default linkSlice.reducer

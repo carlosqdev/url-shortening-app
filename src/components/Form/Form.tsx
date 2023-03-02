@@ -3,7 +3,7 @@ import { useFormLink } from '../../hooks/useFormLink'
 import './Form.css'
 
 export const Form = () => {
-  const { createShortLink, isCreating } = useCreateShortLink()
+  const { createShortLink, isCreating, error } = useCreateShortLink()
   const { link, isEmptyInput, onSubmit, onLinkChange } = useFormLink({
     createShortLink
   })
@@ -24,6 +24,12 @@ export const Form = () => {
 
         {isCreating && (
           <span className='form_span_getting'>Getting link please wait...</span>
+        )}
+
+        {error && (
+          <span className='form_span'>
+            <strong>{error}</strong>
+          </span>
         )}
 
         <button
