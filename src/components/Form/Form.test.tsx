@@ -3,9 +3,7 @@ import { render, screen, cleanup, fireEvent } from '@testing-library/react'
 import { Provider } from 'react-redux'
 
 import { Form } from './Form'
-import { getShortenLink } from '../../services/get-shorten-link'
 import { store } from '../../context/app/store'
-
 
 describe('FormToShorten', () => {
   afterEach(cleanup)
@@ -13,10 +11,11 @@ describe('FormToShorten', () => {
   it('Should not call the api without a link', () => {
     const mockFn = vi.fn()
 
-    render(<Provider store={store}>
-      <Form shorteLink={mockFn}/>
-    </Provider>)
-
+    render(
+      <Provider store={store}>
+        <Form />
+      </Provider>
+    )
 
     const button = screen.getByRole('button', {
       name: /shorten it!/i
@@ -28,9 +27,11 @@ describe('FormToShorten', () => {
   })
 
   it('Should show alert to user when input is empty', () => {
-    render(<Provider store={store}>
-      <Form shorteLink={getShortenLink}/>
-    </Provider>)
+    render(
+      <Provider store={store}>
+        <Form />
+      </Provider>
+    )
 
     const button = screen.getByRole('button', {
       name: /shorten it!/i
@@ -44,5 +45,4 @@ describe('FormToShorten', () => {
       expect(span).toBeDefined()
     }, 5)
   })
-
 })

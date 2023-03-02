@@ -19,7 +19,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Form shorteLink={getShortenLink} />
+        <Form />
         <ListOfLinks links={links} />
         <AdvancedStatistics />
         <CallToAction />
