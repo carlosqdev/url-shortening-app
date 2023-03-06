@@ -1,6 +1,6 @@
 import { Link } from '../context/features/linkSlice'
 
-const BASE_API = 'https://api.shrtco.de/v2'
+export const BASE_API = 'https://api.shrtco.de/v2'
 
 export async function getShortenLink(link: string): Promise<Link> {
   try {
@@ -9,6 +9,6 @@ export async function getShortenLink(link: string): Promise<Link> {
     const { code, full_short_link, original_link }: Link = json.result
     return { code, full_short_link, original_link }
   } catch (err) {
-    return { code: '404', original_link: link, full_short_link: '' }
+    return { full_short_link: '', original_link: '', code: '404' }
   }
 }
